@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="86dp"
+        android:layout_marginLeft="86dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="86dp"
+        android:layout_marginRight="86dp"
+        android:layout_marginBottom="28dp"
+        android:text="@string/number_guessing_game"
+        android:textSize="20sp"
+        app:fontFamily="@font/biorhyme_bold"
+        app:layout_constraintBottom_toTopOf="@+id/subTitleTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/subTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="105dp"
+        android:layout_marginLeft="105dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="105dp"
+        android:layout_marginRight="105dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/you_want_to_guess_between"
+        app:fontFamily="sans-serif-condensed"
+        app:layout_constraintBottom_toTopOf="@+id/editTextStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+    <EditText
+        android:id="@+id/editTextStart"
+        android:layout_width="126dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginBottom="544dp"
+        android:ems="10"
+        android:hint="@string/start"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/editTextEnd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subTitleTextView" />
+
+    <EditText
+        android:id="@+id/editTextEnd"
+        android:layout_width="126dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginLeft="108dp"
+        android:layout_marginTop="54dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="544dp"
+        android:ems="10"
+        android:hint="@string/end"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextStart"
+        app:layout_constraintTop_toBottomOf="@+id/subTitleTextView" />
+
+    <Button
+        android:id="@+id/guessButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="155dp"
+        android:layout_marginLeft="155dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginRight="155dp"
+        android:layout_marginBottom="464dp"
+        android:onClick="onGuessPressed"
+        android:text="@string/guess"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subTitleTextView" />
+
+    <EditText
+        android:id="@+id/editTextUserResponse"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginBottom="57dp"
+        android:ems="10"
+        android:hint="@string/your_guess"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/guessButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextStart" />
+</androidx.constraintlayout.widget.ConstraintLayout>
